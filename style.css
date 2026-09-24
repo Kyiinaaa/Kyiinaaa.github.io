@@ -418,7 +418,7 @@ a.channel:hover { transform: translateX(4px); border-color: var(--accent); backg
 .channel__value { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .channel__arrow { margin-left: auto; color: var(--muted); font-size: 1.1rem; transition: color .15s ease; }
 a.channel:hover .channel__arrow { color: var(--accent); }
-.channels li:first-child .channel { padding-right: 84px; }
+.channels li:has(.copy) .channel { padding-right: 84px; }
 .copy {
   position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
   font: 600 .78rem var(--sans); padding: .45em .8em; border-radius: 999px; cursor: pointer;
