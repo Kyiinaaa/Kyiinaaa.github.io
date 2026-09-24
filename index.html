@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=13" />
+  <link rel="stylesheet" href="style.css?v=14" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -741,6 +741,32 @@ Running 7 tests using 1 worker
       </header>
       <p class="lead">A commissioned web system for a college's guidance and counseling office, built with a teammate over four months. I built most of the UI: the portals, forms, booking flow, and PDF records.</p>
 
+            <div class="gal" data-gallery>
+        <div class="gal__stage">
+          <figure class="gal__slide" data-i="0"><img src="assets/commission/01.jpg" alt="Guidance system: Login" loading="lazy" /><figcaption><b>Login</b> The portal's sign-in screen.</figcaption></figure>
+          <figure class="gal__slide" data-i="1" hidden><img src="assets/commission/02.jpg" alt="Guidance system: Student dashboard" loading="lazy" /><figcaption><b>Student dashboard</b> SCRI progress, booking stats, and quick actions.</figcaption></figure>
+          <figure class="gal__slide" data-i="2" hidden><img src="assets/commission/03.jpg" alt="Guidance system: SCRI form" loading="lazy" /><figcaption><b>SCRI form</b> The Student Cumulative Records Inventory, starting with personal data.</figcaption></figure>
+          <figure class="gal__slide" data-i="3" hidden><img src="assets/commission/04.jpg" alt="Guidance system: Required documents" loading="lazy" /><figcaption><b>Required documents</b> File uploads, a certification checkbox, and the signature upload.</figcaption></figure>
+          <figure class="gal__slide" data-i="4" hidden><img src="assets/commission/05.jpg" alt="Guidance system: Intake interview" loading="lazy" /><figcaption><b>Intake interview</b> A consent disclaimer and the first interview questions.</figcaption></figure>
+          <figure class="gal__slide" data-i="5" hidden><img src="assets/commission/06.jpg" alt="Guidance system: Intake interview, continued" loading="lazy" /><figcaption><b>Intake interview, continued</b> Family, childhood, and community questions, priority ranking, and school performance.</figcaption></figure>
+          <figure class="gal__slide" data-i="6" hidden><img src="assets/commission/07.jpg" alt="Guidance system: Assessments" loading="lazy" /><figcaption><b>Assessments</b> The student's assigned psychological assessments.</figcaption></figure>
+          <figure class="gal__slide" data-i="7" hidden><img src="assets/commission/08.jpg" alt="Guidance system: Booking" loading="lazy" /><figcaption><b>Booking</b> Counseling session booking, locked until the SCRI is complete.</figcaption></figure>
+          <button class="gal__nav gal__nav--prev" data-step="-1" aria-label="Previous screenshot">‹</button>
+          <button class="gal__nav gal__nav--next" data-step="1" aria-label="Next screenshot">›</button>
+          <span class="gal__count" aria-live="polite">1 / 8</span>
+        </div>
+        <div class="gal__thumbs">
+          <button class="gal__thumb" data-i="0" aria-label="Login"><img src="assets/commission/01.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="1" aria-label="Student dashboard"><img src="assets/commission/02.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="2" aria-label="SCRI form"><img src="assets/commission/03.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="3" aria-label="Required documents"><img src="assets/commission/04.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="4" aria-label="Intake interview"><img src="assets/commission/05.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="5" aria-label="Intake interview, continued"><img src="assets/commission/06.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="6" aria-label="Assessments"><img src="assets/commission/07.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="7" aria-label="Booking"><img src="assets/commission/08.jpg" alt="" loading="lazy" /></button>
+        </div>
+      </div>
+
       <ul class="kpis">
         <li><b data-count="54">54</b><span>commits from me</span></li>
         <li><b>5</b><span>role-based portals</span></li>
@@ -776,7 +802,7 @@ Running 7 tests using 1 worker
       </ol>
 
       <ul class="tags" style="border-top:0;padding-top:22px"><li>Vue 3</li><li>TypeScript</li><li>Inertia.js</li><li>Laravel</li><li>Tailwind CSS</li><li>Chart.js</li><li>Supabase</li></ul>
-      <p class="muted small">The source code is private, and screenshots are left out to protect student records.</p>
+      <p class="muted small">Screenshots come from a local demo copy with sample data. School branding is removed and the code stays private.</p>
     </div>
   </dialog>
 
@@ -787,6 +813,6 @@ Running 7 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
