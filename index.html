@@ -8,7 +8,7 @@
   <meta property="og:title" content="Inalyn Kim Tamayo — QA Analyst" />
   <meta property="og:description" content="Manual, regression, API, and end-to-end testing. Automation with Playwright." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2316a34a'/><path d='M9 16.5l4.5 4.5L23 11.5' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23db2777'/><path d='M9 16.5l4.5 4.5L23 11.5' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -46,7 +46,7 @@
       <div class="container hero__grid">
         <div class="hero__copy">
           <p class="eyebrow"><span class="dot"></span> Open to QA &amp; test automation opportunities</p>
-          <h1>Inalyn Kim P. Tamayo</h1>
+          <h1>Inalyn Kim P. Tamayo<span class="hl">.</span></h1>
           <p class="hero__role">QA Analyst <span class="sep">/</span> Manual &amp; Automation Testing <span class="sep">/</span> Playwright</p>
           <p class="hero__lede">
             I test real-world software workflows end to end — from what the user clicks to what the API returns
@@ -79,6 +79,15 @@ Running 6 tests using 1 worker
       </div>
     </section>
 
+    <section class="stats" aria-label="Highlights">
+      <ul class="container stats__grid">
+        <li><span class="stats__num">4</span><span class="stats__label">testing layers: UI, API, database, CI</span></li>
+        <li><span class="stats__num">100s</span><span class="stats__label">claim forms QA-validated for accuracy</span></li>
+        <li><span class="stats__num">1.56</span><span class="stats__label">GPA · BSIT Cum Laude</span></li>
+        <li><span class="stats__num">10+</span><span class="stats__label">tech workshops &amp; trainings</span></li>
+      </ul>
+    </section>
+
     <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container">
@@ -104,13 +113,10 @@ Running 6 tests using 1 worker
               features, and ran both manual and automated tests. Today I investigate defects, validate backend and API
               behavior, and keep expanding automated coverage.
             </p>
+            <ul class="focus" aria-label="Current focus areas">
+              <li>Test automation</li><li>System reliability</li><li>API validation</li><li>QA process improvement</li>
+            </ul>
           </div>
-          <ul class="facts">
-            <li><span class="facts__num">4</span><span>testing layers covered: UI, API, database, CI</span></li>
-            <li><span class="facts__num">1.56</span><span>GPA, BSIT Cum Laude</span></li>
-            <li><span class="facts__num">100s</span><span>of claim forms QA-validated for data accuracy</span></li>
-            <li><span class="facts__num">10+</span><span>tech workshops &amp; trainings attended</span></li>
-          </ul>
         </div>
       </div>
     </section>
@@ -125,11 +131,11 @@ Running 6 tests using 1 worker
 
         <ol class="timeline">
           <li class="job">
-            <div class="job__meta">
-              <span class="badge badge--live">Current</span>
-            </div>
             <div class="job__body">
-              <h3>QA Analyst <span class="at">@ Arrow</span></h3>
+              <div class="job__head">
+                <h3>QA Analyst <span class="at">@ Arrow</span></h3>
+                <span class="badge badge--live">Current</span>
+              </div>
               <p class="job__sub">Healthcare revenue-cycle platform</p>
               <ul class="checks">
                 <li>Perform manual, regression, API, and end-to-end testing across application workflows.</li>
@@ -143,11 +149,11 @@ Running 6 tests using 1 worker
           </li>
 
           <li class="job">
-            <div class="job__meta">
-              <span class="badge">Jun 2024 – Jan 2025</span>
-            </div>
             <div class="job__body">
-              <h3>Student Intern <span class="at">@ DSWD Field Office XI</span></h3>
+              <div class="job__head">
+                <h3>Student Intern <span class="at">@ DSWD Field Office XI</span></h3>
+                <span class="badge">Jun 2024 – Jan 2025</span>
+              </div>
               <p class="job__sub">ICTMS Department · Davao City</p>
               <ul class="checks">
                 <li>Served as Project Manager, Technical Writer, Developer, and QA Specialist.</li>
@@ -327,14 +333,16 @@ Running 6 tests using 1 worker
         </header>
         <div class="edu">
           <div class="edu__card">
-            <p class="badge">2021 – 2025</p>
-            <h3>BS Information Technology</h3>
+            <div class="edu__top">
+              <h3>BS Information Technology</h3>
+              <span class="badge">2021 – 2025</span>
+            </div>
             <p class="edu__school">University of Southeastern Philippines — Obrero Campus</p>
-            <p>Major in Information Security</p>
+            <p class="edu__major">Major in Information Security</p>
             <ul class="honors">
-              <li>🎓 Cum Laude</li>
-              <li>📈 GPA 1.56</li>
-              <li>⭐ Consistent Dean's Lister</li>
+              <li>Cum Laude</li>
+              <li>GPA 1.56</li>
+              <li>Consistent Dean's Lister</li>
             </ul>
           </div>
           <div class="edu__list">
@@ -356,7 +364,8 @@ Running 6 tests using 1 worker
 
     <!-- CONTACT -->
     <section id="contact" class="section contact">
-      <div class="container contact__inner">
+      <div class="container">
+        <div class="contact-card">
         <p class="kicker">06 — Contact</p>
         <h2>Let's ship something that works.</h2>
         <p class="contact__lede">Open to QA Analyst, QA Engineer, and test automation roles. The fastest way to reach me is email.</p>
@@ -367,6 +376,7 @@ Running 6 tests using 1 worker
             <!-- LinkedIn: replace the href below with your profile URL, then remove the "hidden" attribute -->
             <a href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener" hidden>LinkedIn</a>
           </div>
+        </div>
         </div>
       </div>
     </section>
