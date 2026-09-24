@@ -698,3 +698,10 @@ body.sheet-open { overflow: hidden; }
 
 .about__cta { color: var(--accent-ink); font-weight: 600; text-decoration: none; white-space: nowrap; }
 .about__cta:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Highlights strip: livelier */
+.stats__grid li { transition: background .25s ease; }
+.stats__grid li:hover { background: color-mix(in srgb, var(--accent-soft) 55%, transparent); }
+.stats__num { font-size: clamp(1.9rem, 3.4vw, 2.4rem); font-variant-numeric: tabular-nums; }
+.stats__num--word { font-size: clamp(1.5rem, 2.6vw, 1.9rem); letter-spacing: -0.02em; }
+.stats__label { max-width: 22ch; }

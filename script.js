@@ -169,6 +169,27 @@
     }
   });
 
+
+  // Highlights strip: count up when scrolled into view
+  const counters = document.querySelectorAll(".stats__num[data-count]");
+  const runCount = (el) => {
+    const end = Number(el.dataset.count), suffix = el.dataset.suffix || "";
+    if (reduceMotion) { el.textContent = end + suffix; return; }
+    const start = performance.now(), dur = 1400;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / dur), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * eased) + (p === 1 ? suffix : "");
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if ("IntersectionObserver" in window) {
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { runCount(e.target); countObserver.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach((el) => { if (!reduceMotion) el.textContent = "0"; countObserver.observe(el); });
+  }
+
   // Copy email
   document.querySelectorAll(".copy").forEach((btn) => {
     btn.addEventListener("click", async () => {
