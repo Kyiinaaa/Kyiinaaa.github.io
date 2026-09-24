@@ -705,3 +705,32 @@ body.sheet-open { overflow: hidden; }
 .stats__num { font-size: clamp(1.9rem, 3.4vw, 2.4rem); font-variant-numeric: tabular-nums; }
 .stats__num--word { font-size: clamp(1.5rem, 2.6vw, 1.9rem); letter-spacing: -0.02em; }
 .stats__label { max-width: 22ch; }
+
+/* Recommendations */
+.recs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 18px; }
+.rec {
+  position: relative; margin: 0; display: flex; flex-direction: column; gap: 22px;
+  padding: 28px 26px 24px; border-radius: var(--radius); background: var(--surface);
+  border: 1px solid var(--line); box-shadow: var(--shadow); overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.rec:hover { transform: translateY(-3px); box-shadow: 0 16px 40px var(--accent-glow); }
+.rec__mark {
+  position: absolute; top: -18px; right: 16px; font: 800 7rem/1 Georgia, serif;
+  color: var(--accent); opacity: .14; pointer-events: none;
+}
+.rec__quote { margin: 0; flex: 1; }
+.rec__quote p { margin: 0; font-size: 1.02rem; line-height: 1.7; color: var(--text); }
+.rec__who { display: flex; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px dashed var(--line-strong); }
+.rec__avatar, .rec__photo { flex: none; width: 44px; height: 44px; border-radius: 50%; }
+.rec__avatar { display: grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--accent), #c084fc); }
+.rec__photo { object-fit: cover; }
+.rec__text { display: flex; flex-direction: column; min-width: 0; }
+.rec__name { font-weight: 700; }
+.rec__name a { color: inherit; text-decoration: none; }
+.rec__name a:hover { color: var(--accent-ink); }
+.rec__role { font-size: .85rem; color: var(--muted); }
+
+.rec--placeholder { border: 2px dashed var(--line-strong); box-shadow: none; background: color-mix(in srgb, var(--surface) 60%, transparent); }
+.rec--placeholder .rec__quote p, .rec--placeholder .rec__name { color: var(--muted); font-style: italic; }
+.rec--placeholder .rec__avatar { background: var(--bg-alt); color: var(--muted); border: 1px dashed var(--line-strong); }

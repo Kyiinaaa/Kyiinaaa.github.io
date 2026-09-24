@@ -42,7 +42,7 @@
   document.querySelectorAll("main section[id]").forEach((s) => sectionObserver.observe(s));
 
   // Reveal on scroll
-  const revealTargets = document.querySelectorAll(".section__head, .job, .case, .mini, .skill, .edu > *, .stats__grid li");
+  const revealTargets = document.querySelectorAll(".section__head, .job, .case, .mini, .skill, .edu > *, .stats__grid li, .rec");
   if (!reduceMotion && "IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
