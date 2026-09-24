@@ -75,7 +75,7 @@
   }
 
 
-  // Case study detail sheets
+  // Project detail sheets
   const openSheet = (dlg) => {
     if (!dlg || dlg.open) return;
     dlg.classList.remove("closing");
