@@ -693,3 +693,5 @@ body.sheet-open { overflow: hidden; }
 .sheet[open] .role:nth-child(3), .sheet[open] .kpis li:nth-child(3) { animation-delay: .12s; }
 .sheet[open] .role:nth-child(4), .sheet[open] .kpis li:nth-child(4) { animation-delay: .18s; }
 .sheet[open] .role:nth-child(5) { animation-delay: .24s; }
+.gal__thumbs--scroll { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; scrollbar-width: thin; }
+.gal__thumbs--scroll .gal__thumb { flex: 0 0 112px; scroll-snap-align: start; }

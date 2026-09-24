@@ -150,6 +150,11 @@
         s.style.setProperty("--dx", `${dir * 30}px`);
         s.classList.remove("enter"); void s.offsetWidth; s.classList.add("enter");
         thumbs.forEach((t, k) => t.classList.toggle("active", k === idx));
+        const strip = thumbs[idx]?.parentElement;
+        if (strip && strip.scrollWidth > strip.clientWidth) {
+          const t = thumbs[idx];
+          strip.scrollTo({ left: t.offsetLeft - strip.offsetLeft - (strip.clientWidth - t.clientWidth) / 2, behavior: reduceMotion ? "auto" : "smooth" });
+        }
         count.textContent = `${idx + 1} / ${slides.length}`;
         cur = idx;
       };
