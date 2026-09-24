@@ -382,6 +382,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .contact__cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .ico { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .ico--fill { fill: currentColor; stroke: none; }
+.btn--icon { padding: .75em; }
 .is-soon { cursor: default; opacity: .85; }
 .is-soon:hover { transform: none; background: var(--surface); color: var(--text); border-color: var(--line-strong); }
 .soon {
