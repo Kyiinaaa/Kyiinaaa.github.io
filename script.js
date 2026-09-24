@@ -74,5 +74,19 @@
     setTimeout(step, 400);
   }
 
+  // Copy email
+  document.querySelectorAll(".copy").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+        btn.textContent = "Copied ✓";
+        btn.classList.add("done");
+        setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1800);
+      } catch {
+        window.location.href = `mailto:${btn.dataset.copy}`;
+      }
+    });
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

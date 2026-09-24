@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -380,16 +380,64 @@ Running 7 tests using 1 worker
     <section id="contact" class="section contact">
       <div class="container">
         <div class="contact-card">
-        <p class="kicker">06 — Contact</p>
-        <h2>Let's ship something that works.</h2>
-        <p class="contact__lede">Open to QA Analyst, QA Engineer, test automation, and junior frontend roles. The fastest way to reach me is email.</p>
-        <div class="contact__links">
-          <a class="btn btn--big" href="mailto:inalynkimtamayo@gmail.com">inalynkimtamayo@gmail.com</a>
-          <div class="socials">
-            <a href="https://github.com/Kyiinaaa" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/inalyn-kim-tamayo-484571211/" target="_blank" rel="noopener">LinkedIn</a>
+          <div class="contact__intro">
+            <p class="kicker">06 — Contact</p>
+            <h2>Let's build something that <em>works</em>.</h2>
+            <p class="contact__lede">
+              Open to QA Analyst, QA Engineer, test automation, and junior frontend roles.
+              Email is the fastest way to reach me.
+            </p>
+
+            <div class="idcard">
+              <span class="idcard__avatar" aria-hidden="true">IT</span>
+              <div>
+                <p class="idcard__name">Inalyn Kim P. Tamayo</p>
+                <p class="idcard__role">QA Analyst · Manual &amp; Automation Testing · Playwright · Frontend</p>
+              </div>
+            </div>
+
+            <div class="contact__cta">
+              <a class="btn" href="mailto:inalynkimtamayo@gmail.com">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                Email me
+              </a>
+              <!-- Resume: put the PDF in this folder as resume.pdf, then set href="resume.pdf" download, and remove aria-disabled + the "is-soon" class -->
+              <a class="btn btn--ghost is-soon" aria-disabled="true" title="Updated resume coming soon">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 12v6M9 15l3 3 3-3"/></svg>
+                Resume <span class="soon">coming soon</span>
+              </a>
+            </div>
           </div>
-        </div>
+
+          <ul class="channels">
+            <li>
+              <a class="channel" href="mailto:inalynkimtamayo@gmail.com">
+                <span class="channel__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+                <span class="channel__text"><span class="channel__label">Email</span><span class="channel__value">inalynkimtamayo@gmail.com</span></span>
+              </a>
+              <button class="copy" type="button" data-copy="inalynkimtamayo@gmail.com" aria-label="Copy email address">Copy</button>
+            </li>
+            <li>
+              <a class="channel" href="https://www.linkedin.com/in/inalyn-kim-tamayo-484571211/" target="_blank" rel="noopener">
+                <span class="channel__icon"><svg class="ico ico--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-1.8 3.65-1.8 3.9 0 4.5 2.4 4.5 5.6v5.7h-4v-5c0-1.2 0-2.8-1.75-2.8s-2.25 1.3-2.25 2.7v5.1h-4z"/></svg></span>
+                <span class="channel__text"><span class="channel__label">LinkedIn</span><span class="channel__value">Inalyn Kim Tamayo</span></span>
+                <span class="channel__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://github.com/Kyiinaaa" target="_blank" rel="noopener">
+                <span class="channel__icon"><svg class="ico ico--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.46-1.1-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></span>
+                <span class="channel__text"><span class="channel__label">GitHub</span><span class="channel__value">github.com/Kyiinaaa</span></span>
+                <span class="channel__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li>
+              <div class="channel channel--static">
+                <span class="channel__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <span class="channel__text"><span class="channel__label">Location</span><span class="channel__value">Davao City, Philippines</span></span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -402,6 +450,6 @@ Running 7 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
