@@ -747,3 +747,6 @@ body.sheet-open { overflow: hidden; }
   .stats__grid li { border-left: 0 !important; padding-left: 0 !important; }
   .stats__grid li + li { border-top: 1px solid var(--line) !important; }
 }
+
+.rec__quote--short p { font-size: clamp(1.8rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; color: var(--accent); line-height: 1.1; }
+.rec__context { margin: -8px 0 0; font-size: .92rem; color: var(--text-2); }
