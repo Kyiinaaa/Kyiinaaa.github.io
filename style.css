@@ -348,8 +348,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .edu__list h3 { font-size: 1.05rem; margin-bottom: 8px; }
 .trainings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
 .trainings li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: .92rem; }
+.trainings__text { display: flex; flex-direction: column; min-width: 0; }
+.trainings__name { color: var(--text); font-weight: 500; }
+.trainings__place { font-size: .8rem; color: var(--muted); }
+.trainings__note { margin: -4px 0 6px; }
+.member { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 18px 0 0; font-size: .92rem; color: var(--text-2); }
 .trainings time { font-family: var(--mono); font-size: .75rem; color: var(--muted); white-space: nowrap; padding-top: .2em; }
-.edu__list .small { margin: 16px 0 0; }
+
 @media (max-width: 640px) { .trainings { grid-template-columns: minmax(0, 1fr); } }
 
 /* Contact */
