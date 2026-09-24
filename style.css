@@ -196,7 +196,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .terminal__bar p { margin: 0 0 0 10px; font-family: var(--mono); font-size: .75rem; color: #9a8591; }
 .terminal__body {
   margin: 0; padding: 20px 22px 24px; font-family: var(--mono);
-  font-size: clamp(.68rem, 1.35vw, .85rem); line-height: 1.75; overflow-x: auto; min-height: 21.5em;
+  font-size: clamp(.68rem, 1.35vw, .85rem); line-height: 1.75; overflow-x: auto; min-height: 23.3em;
 }
 .t-prompt { color: var(--term-accent); }
 .t-pass { color: var(--term-accent); font-weight: 700; }

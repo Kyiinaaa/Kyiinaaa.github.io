@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -45,9 +45,9 @@
     <section id="top" class="hero">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="dot"></span> Open to QA &amp; test automation opportunities</p>
+          <p class="eyebrow"><span class="dot"></span> Open to QA, test automation &amp; frontend roles</p>
           <h1>Inalyn Kim P. Tamayo<span class="hl">.</span></h1>
-          <p class="hero__role">QA Analyst <span class="sep">/</span> Manual &amp; Automation Testing <span class="sep">/</span> Playwright</p>
+          <p class="hero__role">QA Analyst <span class="sep">/</span> Manual &amp; Automation Testing <span class="sep">/</span> Playwright <span class="sep">/</span> Frontend</p>
           <p class="hero__lede">
             I test real-world software workflows end to end — from what the user clicks to what the API returns
             and what lands in the database — and I turn the critical paths into reliable automated coverage.
@@ -65,16 +65,17 @@
           </div>
           <pre class="terminal__body" id="terminal"><code><span class="t-prompt">$</span> npx playwright test portfolio.spec.ts
 
-Running 6 tests using 1 worker
+Running 7 tests using 1 worker
 
 <span class="t-pass">✓</span> about      › detail-oriented QA analyst
 <span class="t-pass">✓</span> testing    › manual, regression, API, E2E
 <span class="t-pass">✓</span> automation › playwright coverage in CI
+<span class="t-pass">✓</span> frontend   › vue, html/css, responsive ui
 <span class="t-pass">✓</span> security   › BSIT, InfoSec major
 <span class="t-pass">✓</span> education  › cum laude, dean's lister
 <span class="t-pass">✓</span> contact    › inbox is open
 
-<span class="t-sum">6 passed</span> <span class="t-dim">(1.2s)</span></code></pre>
+<span class="t-sum">7 passed</span> <span class="t-dim">(1.2s)</span></code></pre>
         </div>
       </div>
     </section>
@@ -113,8 +114,13 @@ Running 6 tests using 1 worker
               features, and ran both manual and automated tests. At Arrow, I investigated defects, validated backend and API
               behavior, and expanded automated coverage with Playwright.
             </p>
+            <p>
+              I'm also growing into <strong>frontend development</strong>. I built the Vue frontend for my capstone,
+              HookEdu, and I enjoy how the two sides feed each other: testing shows me where interfaces tend to break,
+              and building them makes me a sharper tester.
+            </p>
             <ul class="focus" aria-label="Current focus areas">
-              <li>Test automation</li><li>System reliability</li><li>API validation</li><li>QA process improvement</li>
+              <li>Test automation</li><li>System reliability</li><li>API validation</li><li>QA process improvement</li><li>Frontend development</li>
             </ul>
           </div>
         </div>
@@ -158,6 +164,7 @@ Running 6 tests using 1 worker
               <ul class="checks">
                 <li>Served as Project Manager, Technical Writer, Developer, and QA Specialist.</li>
                 <li>Created user stories and project plans using Agile development practices.</li>
+                <li>Designed low- and high-fidelity prototypes for responsive web and mobile interfaces.</li>
                 <li>Conducted manual and automated QA testing to validate system reliability and functionality.</li>
                 <li>Built backend features for the vehicle and conference-room request modules, including search, pagination, and filtering.</li>
                 <li>Built and integrated a statistics dashboard with real-time data aggregation and visualization.</li>
@@ -174,7 +181,7 @@ Running 6 tests using 1 worker
       <div class="container">
         <header class="section__head">
           <p class="kicker">03 — Case Studies</p>
-          <h2>Selected QA work.</h2>
+          <h2>Selected work.</h2>
           <p class="section__note">Work projects are described at a high level. No patient data, customer data, or internal screenshots are shared.</p>
         </header>
 
@@ -239,21 +246,22 @@ Running 6 tests using 1 worker
           <article class="case">
             <div class="case__top">
               <span class="case__id">TC-04</span>
-              <span class="status status--pass">Capstone</span>
+              <span class="status status--pass">Frontend + QA</span>
             </div>
             <h3>HookEdu — Phishing Awareness Platform</h3>
-            <p class="case__role">Developer / QA</p>
+            <p class="case__role">Frontend Developer / QA · Capstone Project</p>
             <p>
               Designed and developed a phishing-awareness platform with interactive training modules, activities, videos,
               user progress tracking, and admin performance monitoring.
             </p>
             <ul class="checks checks--sm">
-              <li>Functional &amp; user-workflow testing</li>
-              <li>Training module &amp; quiz flow validation</li>
-              <li>Dashboard &amp; role-based functionality checks</li>
-              <li>Responsive UI testing</li>
+              <li>Built the frontend in Vue: training modules, activities, and quiz flows</li>
+              <li>Created progress-tracking and admin dashboard views</li>
+              <li>Made layouts responsive across desktop and mobile</li>
+              <li>Tested functionality, user workflows, and role-based access</li>
+              <li>Validated quiz flows, dashboards, and responsive behavior</li>
             </ul>
-            <ul class="tags"><li>Laravel</li><li>Vue</li><li>MySQL</li><li>Security</li></ul>
+            <ul class="tags"><li>Vue</li><li>JavaScript</li><li>HTML/CSS</li><li>Laravel</li><li>MySQL</li></ul>
           </article>
         </div>
 
@@ -297,9 +305,15 @@ Running 6 tests using 1 worker
             </ul>
           </div>
           <div class="skill">
-            <h3>Development</h3>
+            <h3>Frontend</h3>
+            <ul class="chips chips--accent">
+              <li>HTML/CSS</li><li>JavaScript</li><li>Vue</li><li>Responsive Design</li><li>UI Prototyping</li><li>Figma</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>Backend &amp; Data</h3>
             <ul class="chips">
-              <li>JavaScript</li><li>PHP</li><li>Java</li><li>SQL</li><li>HTML/CSS</li><li>Laravel</li><li>Vue</li><li>REST APIs</li><li>MySQL</li><li>Git</li>
+              <li>PHP</li><li>Laravel</li><li>Java</li><li>SQL</li><li>MySQL</li><li>REST APIs</li><li>Git</li>
             </ul>
           </div>
           <div class="skill">
@@ -368,7 +382,7 @@ Running 6 tests using 1 worker
         <div class="contact-card">
         <p class="kicker">06 — Contact</p>
         <h2>Let's ship something that works.</h2>
-        <p class="contact__lede">Open to QA Analyst, QA Engineer, and test automation roles. The fastest way to reach me is email.</p>
+        <p class="contact__lede">Open to QA Analyst, QA Engineer, test automation, and junior frontend roles. The fastest way to reach me is email.</p>
         <div class="contact__links">
           <a class="btn btn--big" href="mailto:inalynkimtamayo@gmail.com">inalynkimtamayo@gmail.com</a>
           <div class="socials">
@@ -388,6 +402,6 @@ Running 6 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
