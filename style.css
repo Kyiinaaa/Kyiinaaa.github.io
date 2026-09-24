@@ -112,7 +112,12 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-bottom: 1px solid var(--line);
 }
 .nav__inner { display: flex; align-items: center; gap: 16px; height: 64px; }
-.brand { font-family: var(--mono); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 8px; margin-right: auto; }
+.brand { text-decoration: none; display: flex; align-items: center; gap: 8px; margin-right: auto; }
+.brand__logo { width: 40px; height: 40px; display: block; transition: transform .3s cubic-bezier(.3, 1.6, .5, 1); }
+.brand:hover .brand__logo { transform: rotate(-8deg) scale(1.08); }
+.brand__word { font-family: "Nunito", var(--sans); font-weight: 800; font-size: 1.3rem; letter-spacing: -0.01em; line-height: 1; }
+.brand__dot { color: #e0409a; margin: 0 1px; }
+.brand__qa { background: linear-gradient(90deg, #f0609e, #b574e0); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .brand__mark {
   display: grid; place-items: center; width: 28px; height: 28px;
   background: var(--accent); color: #fff; border-radius: 8px; font-size: 15px;
