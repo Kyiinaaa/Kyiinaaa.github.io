@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -182,11 +182,11 @@ Running 7 tests using 1 worker
         <header class="section__head">
           <p class="kicker">03 — Case Studies</p>
           <h2>Selected work.</h2>
-          <p class="section__note">Work projects are described at a high level. No patient data, customer data, or internal screenshots are shared.</p>
+          <p class="section__note">Click a case study to see the details. Work results are recreated and generalized, so no patient data, customer data, or internal screenshots are shared.</p>
         </header>
 
         <div class="cases">
-          <article class="case">
+          <article class="case case--open" data-open="dlg-auto" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details: TC-01">
             <div class="case__top">
               <span class="case__id">TC-01</span>
               <span class="status status--pass">Automation</span>
@@ -202,9 +202,10 @@ Running 7 tests using 1 worker
               <li>Generated test evidence and reviewed CI results</li>
             </ul>
             <ul class="tags"><li>Playwright</li><li>TypeScript</li><li>API testing</li><li>CI</li></ul>
+            <span class="case__more">View details <span aria-hidden="true">→</span></span>
           </article>
 
-          <article class="case">
+          <article class="case case--open" data-open="dlg-manual" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details: TC-02">
             <div class="case__top">
               <span class="case__id">TC-02</span>
               <span class="status status--pass">Manual QA</span>
@@ -224,9 +225,10 @@ Running 7 tests using 1 worker
               <li>Retested and verified fixes in staging</li>
             </ul>
             <ul class="tags"><li>Manual QA</li><li>Regression</li><li>Exploratory</li><li>Test case design</li><li>Defect reporting</li></ul>
+            <span class="case__more">View details <span aria-hidden="true">→</span></span>
           </article>
 
-          <article class="case">
+          <article class="case case--open" data-open="dlg-data" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details: TC-03">
             <div class="case__top">
               <span class="case__id">TC-03</span>
               <span class="status status--pass">Data Accuracy</span>
@@ -242,9 +244,10 @@ Running 7 tests using 1 worker
               <li>Used structured results to surface recurring extraction issues</li>
             </ul>
             <ul class="tags"><li>Data validation</li><li>Metrics</li><li>Root-cause analysis</li></ul>
+            <span class="case__more">View details <span aria-hidden="true">→</span></span>
           </article>
 
-          <article class="case">
+          <article class="case case--open" data-open="dlg-hookedu" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details: TC-04">
             <div class="case__top">
               <span class="case__id">TC-04</span>
               <span class="status status--pass">Frontend + QA</span>
@@ -263,6 +266,7 @@ Running 7 tests using 1 worker
               <li>Validated quiz flows, dashboards, and responsive behavior</li>
             </ul>
             <ul class="tags"><li>Vue</li><li>JavaScript</li><li>HTML/CSS</li><li>Laravel</li><li>MySQL</li></ul>
+            <span class="case__more">View screenshots <span aria-hidden="true">→</span></span>
           </article>
         </div>
 
@@ -450,6 +454,242 @@ Running 7 tests using 1 worker
     </section>
   </main>
 
+
+  <!-- ============ CASE STUDY PANELS ============ -->
+  <dialog class="sheet" id="dlg-auto" aria-labelledby="dlg-auto-title">
+    <div class="sheet__inner">
+      <header class="sheet__head">
+        <div>
+          <p class="kicker">TC-01 · Automation</p>
+          <h2 id="dlg-auto-title">Claims Platform: E2E Automation</h2>
+        </div>
+        <button class="sheet__close" data-close aria-label="Close">✕</button>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="Case study parts">
+        <button role="tab" aria-selected="true" aria-controls="auto-p1" id="auto-t1">Part 1 · QA Results</button>
+        <button role="tab" aria-selected="false" aria-controls="auto-p2" id="auto-t2" tabindex="-1">Part 2 · Dev Sidequest</button>
+        <span class="tabs__ink" aria-hidden="true"></span>
+      </div>
+
+      <section class="tabpanel" role="tabpanel" id="auto-p1" aria-labelledby="auto-t1">
+        <p class="lead">A full Playwright regression run across the platform: settings, claims, queues, dashboards, integrations, and the AI assistant.</p>
+
+        <div class="report">
+          <div class="report__bar">
+            <div class="report__search">⌕ Search tests</div>
+            <ul class="report__pills">
+              <li><span>All</span><b data-count="314">314</b></li>
+              <li class="ok"><span>✓ Passed</span><b data-count="284">284</b></li>
+              <li class="bad"><span>✕ Failed</span><b data-count="28">28</b></li>
+              <li class="warn"><span>⚠ Flaky</span><b data-count="2">2</b></li>
+              <li class="skip"><span>⊘ Skipped</span><b data-count="73">73</b></li>
+            </ul>
+          </div>
+          <div class="report__meta"><span>Full regression run</span><span>Total time: 1.1h · 50+ spec files</span></div>
+
+          <div class="stack" aria-label="284 passed, 28 failed, 2 flaky out of 314 run">
+            <span class="stack__ok" style="--w:90.4%"></span><span class="stack__bad" style="--w:8.9%"></span><span class="stack__warn" style="--w:0.7%"></span>
+          </div>
+          <div class="stack__legend"><span><i class="ok"></i>90% passed</span><span><i class="bad"></i>9% failed, triaged</span><span><i class="warn"></i>2 flaky</span></div>
+
+          <div class="suite">
+            <p class="suite__file">status-mapping.spec.ts</p>
+            <ul>
+              <li class="pass"><span class="mk">✓</span><span>Settings › navigates to status mapping and shows the heading</span><em>@smoke</em><em>@regression</em><time>3.3s</time></li>
+              <li class="pass"><span class="mk">✓</span><span>Settings › every mapping row has lifecycle-stage and hold-party selects</span><em>@regression</em><time>3.1s</time></li>
+              <li class="fail"><span class="mk">✕</span><span>Settings › Save and Cancel are disabled on a clean load</span><em>@smoke</em><em>@regression</em><time>55.6s</time></li>
+              <li class="pass"><span class="mk">✓</span><span>Settings › review card describes the pending change as before → after</span><em>@regression</em><time>3.9s</time></li>
+              <li class="fail"><span class="mk">✕</span><span>Settings › view-only users see "View only" and cannot edit</span><em>@regression</em><time>1.6m</time></li>
+            </ul>
+            <p class="suite__file">action-approvals.spec.ts</p>
+            <ul>
+              <li class="pass"><span class="mk">✓</span><span>Approvals › all actions render under their grouped tables</span><em>@regression</em><time>4.7s</time></li>
+              <li class="pass"><span class="mk">✓</span><span>Approvals › "automatic" and "need approval" counts add up to the total</span><em>@regression</em><time>3.5s</time></li>
+              <li class="pass"><span class="mk">✓</span><span>Practice rules › empty-state button opens the rule editor</span><em>@smoke</em><time>3.9s</time></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sheet__h3">Coverage by area</h3>
+        <ul class="areas">
+          <li><b>Settings</b><span>Status mapping, claim priority, practice rules, action approvals, navigation &amp; deep links</span></li>
+          <li><b>Claims</b><span>Claim list &amp; summary, filters &amp; totals, custom tags, notes, date consistency</span></li>
+          <li><b>Queues &amp; boards</b><span>Board view, column reorder, work sub-states, inbox</span></li>
+          <li><b>Dashboards</b><span>Metrics, table sorting, provider metrics</span></li>
+          <li><b>Integrations</b><span>Integration tiles, file storage and email/calendar connections</span></li>
+          <li><b>AI assistant</b><span>Sidebar, draft persistence, activity log</span></li>
+          <li><b>Contracts &amp; edge cases</b><span>Negative paths, reset mechanism, shared table helpers</span></li>
+        </ul>
+
+        <h3 class="sheet__h3">How I work a run</h3>
+        <ol class="steps">
+          <li><b>Tag it.</b> Every test carries <code>@smoke</code>, <code>@regression</code>, and a feature tag, so a quick check or a full run is one filter away.</li>
+          <li><b>Read the failures.</b> I open the trace for each failure and sort it: real app defect, or an environment or data issue.</li>
+          <li><b>Close the loop.</b> Defects get reported with the trace as evidence, then re-run once they're fixed.</li>
+        </ol>
+      </section>
+
+      <section class="tabpanel" role="tabpanel" id="auto-p2" aria-labelledby="auto-t2" hidden>
+        <p class="lead">A short dev sidequest: stepping over from testing the app to changing it. I made frontend changes in the product's web app, then QA'd my own work end to end.</p>
+
+        <div class="flow" aria-label="Workflow">
+          <div class="flow__step"><span>01</span><b>Pick up</b><p>A frontend ticket from the backlog</p></div>
+          <div class="flow__step"><span>02</span><b>Build</b><p>Make the UI change</p></div>
+          <div class="flow__step"><span>03</span><b>Test</b><p>Manual + automated checks against the change</p></div>
+          <div class="flow__step"><span>04</span><b>Verify</b><p>Confirm in staging before handoff</p></div>
+        </div>
+
+        <div class="duo">
+          <div class="duo__card">
+            <p class="duo__label">Frontend</p>
+            <ul class="checks checks--sm">
+              <li>Made UI changes in a production web app</li>
+                            <li>Kept changes consistent with the existing UI</li>
+            </ul>
+          </div>
+          <div class="duo__card">
+            <p class="duo__label">QA</p>
+            <ul class="checks checks--sm">
+              <li>Tested my own changes like anyone else's</li>
+              <li>Checked the UI against backend data and business rules</li>
+              <li>Verified the result in staging</li>
+            </ul>
+          </div>
+        </div>
+        <p class="sheet__quote">"Building it made me a sharper tester. Now I know where interfaces tend to break, because I've had to hold them together."</p>
+      </section>
+    </div>
+  </dialog>
+
+  <dialog class="sheet" id="dlg-manual" aria-labelledby="dlg-manual-title">
+    <div class="sheet__inner">
+      <header class="sheet__head">
+        <div>
+          <p class="kicker">TC-02 · Manual QA</p>
+          <h2 id="dlg-manual-title">Manual Regression &amp; Exploratory Testing</h2>
+        </div>
+        <button class="sheet__close" data-close aria-label="Close">✕</button>
+      </header>
+      <p class="lead">Every ticket passes through QA before it ships. This is the loop I ran each sprint, and the kinds of tickets that went through it.</p>
+
+      <h3 class="sheet__h3">The QA loop</h3>
+      <ol class="pipeline">
+        <li><span class="dotc"></span><b>In progress</b><p>Dev picks up the ticket</p></li>
+        <li><span class="dotc dotc--ready"></span><b>QA Ready</b><p>Change is on staging and handed to me</p></li>
+        <li><span class="dotc dotc--test"></span><b>Testing</b><p>Test cases, regression, exploratory checks</p></li>
+        <li><span class="dotc dotc--ok"></span><b>QA Approved</b><p>Passes, or goes back with a bug report</p></li>
+        <li><span class="dotc dotc--done"></span><b>Done</b><p>Shipped</p></li>
+      </ol>
+
+      <h3 class="sheet__h3">Kinds of tickets I QA'd <span class="muted small">(paraphrased)</span></h3>
+      <ul class="tickets">
+        <li><span class="tk tk--bug">Bug</span><span>Search and filtering breaks on table pages 2+</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk tk--bug">Bug</span><span>Totals don't match between summary and table</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk tk--bug">Bug</span><span>Status doesn't update after saving from an edit dialog</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk">Feature</span><span>Users can switch between multiple practices</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk">Feature</span><span>Keyboard shortcuts on the claim summary page</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk">Feature</span><span>Assign work to an external user</span><span class="st st--ready">QA Ready</span></li>
+        <li><span class="tk">UI</span><span>Rename a sidebar section to match new terminology</span><span class="st st--ok">QA Approved</span></li>
+        <li><span class="tk tk--auto">Automation</span><span>Review E2E automation for a feature ticket, then merge</span><span class="st st--ok">Done</span></li>
+      </ul>
+
+      <h3 class="sheet__h3">What I look for</h3>
+      <ul class="areas areas--3">
+        <li><b>Happy path</b><span>Does the feature do what the ticket says?</span></li>
+        <li><b>Edges</b><span>Empty states, invalid input, pagination, permissions</span></li>
+        <li><b>Regression</b><span>Did anything nearby break?</span></li>
+        <li><b>Data</b><span>Does the UI match the database and the business rules?</span></li>
+        <li><b>Evidence</b><span>Clear reproduction steps and screenshots in every report</span></li>
+        <li><b>Retest</b><span>Verify the fix on staging, then approve</span></li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog class="sheet" id="dlg-data" aria-labelledby="dlg-data-title">
+    <div class="sheet__inner">
+      <header class="sheet__head">
+        <div>
+          <p class="kicker">TC-03 · Data Accuracy</p>
+          <h2 id="dlg-data-title">CMS-1500 QA &amp; Data Accuracy</h2>
+        </div>
+        <button class="sheet__close" data-close aria-label="Close">✕</button>
+      </header>
+      <p class="lead">Validated data extracted from CMS-1500 claim forms against the source documents, field by field, and tracked the results in structured QA sheets for staging and production.</p>
+
+      <div class="dataviz">
+        <div class="donut" style="--p:40" aria-label="Illustrative pass and fail split">
+          <div class="donut__hole"><b>Pass / Fail</b><span>per claim</span></div>
+        </div>
+        <div class="dataviz__text">
+          <h3 class="sheet__h3" style="margin-top:0">Accuracy tracking</h3>
+          <ul class="checks checks--sm">
+            <li>Each claim got a Passed or Failed result</li>
+            <li>Separate tabs for staging and production</li>
+            <li>Pass and fail rates rolled up into a live summary and chart</li>
+            <li>Failures broken down by field to find recurring issues</li>
+          </ul>
+          <p class="muted small">Chart is illustrative. Real results stay internal.</p>
+        </div>
+      </div>
+
+      <h3 class="sheet__h3">Fields I checked</h3>
+      <ul class="fields">
+        <li>11d · Other health benefit plan</li><li>19 · Additional claim info</li><li>20 · Outside lab</li>
+        <li>21a · Diagnosis</li><li>24 · CPT/HCPCS by service line</li><li>25 · Federal tax ID (EIN)</li>
+        <li>28 · Total charge</li><li>29 · Amount paid</li><li>32a · Facility NPI</li><li>33b · Billing provider ID</li>
+      </ul>
+
+      <h3 class="sheet__h3">Findings log <span class="muted small">(format sample)</span></h3>
+      <div class="log" role="table" aria-label="Sample findings log">
+        <div class="log__row log__row--head" role="row"><span role="columnheader">Date</span><span role="columnheader">Form</span><span role="columnheader">Field</span><span role="columnheader">Finding</span><span role="columnheader">Count</span></div>
+        <div class="log__row" role="row"><span>09-08</span><span class="mask">••••••••</span><span>32a</span><span>Value extracted even though the field was blank on the form</span><span>2</span></div>
+        <div class="log__row" role="row"><span>09-09</span><span class="mask">••••••••</span><span>24</span><span>CPT/HCPCS on the 2nd service line flagged for review</span><span>1</span></div>
+        <div class="log__row" role="row"><span>09-09</span><span class="mask">••••••••</span><span>28</span><span>Total charge on page 2 flagged for review</span><span>1</span></div>
+      </div>
+      <p class="muted small">Form layouts were tracked too: with and without the printed grid.</p>
+    </div>
+  </dialog>
+
+  <dialog class="sheet" id="dlg-hookedu" aria-labelledby="dlg-hookedu-title">
+    <div class="sheet__inner">
+      <header class="sheet__head">
+        <div>
+          <p class="kicker">TC-04 · Frontend + QA · Capstone</p>
+          <h2 id="dlg-hookedu-title">HookEdu: Phishing Awareness Platform</h2>
+        </div>
+        <button class="sheet__close" data-close aria-label="Close">✕</button>
+      </header>
+      <p class="lead">A phishing-awareness training platform with leveled courses, training videos, quizzes, progress tracking, and badges. I built the frontend and tested the flows end to end.</p>
+      <div class="gal" data-gallery>
+        <div class="gal__stage">
+          <figure class="gal__slide" data-i="0"><img src="assets/hookedu/01.jpg" alt="HookEdu: Onboarding" loading="lazy" /><figcaption><b>Onboarding</b> First login asks the user to complete their profile: role and college/department.</figcaption></figure>
+          <figure class="gal__slide" data-i="1" hidden><img src="assets/hookedu/02.jpg" alt="HookEdu: Dashboard" loading="lazy" /><figcaption><b>Dashboard</b> Courses by level, training programs, and a quiz overview with scores and badges.</figcaption></figure>
+          <figure class="gal__slide" data-i="2" hidden><img src="assets/hookedu/03.jpg" alt="HookEdu: Courses" loading="lazy" /><figcaption><b>Courses</b> The training program with level tabs. Higher levels stay locked until the current one is complete.</figcaption></figure>
+          <figure class="gal__slide" data-i="3" hidden><img src="assets/hookedu/04.jpg" alt="HookEdu: Beginner module" loading="lazy" /><figcaption><b>Beginner module</b> Learning objectives, the module list, and a progress chart.</figcaption></figure>
+          <figure class="gal__slide" data-i="4" hidden><img src="assets/hookedu/05.jpg" alt="HookEdu: Advanced module" loading="lazy" /><figcaption><b>Advanced module</b> Advanced objectives, from campaign analysis to phishing simulation exercises.</figcaption></figure>
+          <figure class="gal__slide" data-i="5" hidden><img src="assets/hookedu/06.jpg" alt="HookEdu: Course complete" loading="lazy" /><figcaption><b>Course complete</b> A completion screen that sends the learner to the quiz or back to review.</figcaption></figure>
+          <figure class="gal__slide" data-i="6" hidden><img src="assets/hookedu/07.jpg" alt="HookEdu: Training videos" loading="lazy" /><figcaption><b>Training videos</b> Video lessons organized by level, module, and topic.</figcaption></figure>
+          <figure class="gal__slide" data-i="7" hidden><img src="assets/hookedu/08.jpg" alt="HookEdu: Quiz overview" loading="lazy" /><figcaption><b>Quiz overview</b> Average score, per-quiz results, and badges earned.</figcaption></figure>
+          <button class="gal__nav gal__nav--prev" data-step="-1" aria-label="Previous screenshot">‹</button>
+          <button class="gal__nav gal__nav--next" data-step="1" aria-label="Next screenshot">›</button>
+          <span class="gal__count" aria-live="polite">1 / 8</span>
+        </div>
+        <div class="gal__thumbs">
+          <button class="gal__thumb" data-i="0" aria-label="Onboarding"><img src="assets/hookedu/01.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="1" aria-label="Dashboard"><img src="assets/hookedu/02.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="2" aria-label="Courses"><img src="assets/hookedu/03.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="3" aria-label="Beginner module"><img src="assets/hookedu/04.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="4" aria-label="Advanced module"><img src="assets/hookedu/05.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="5" aria-label="Course complete"><img src="assets/hookedu/06.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="6" aria-label="Training videos"><img src="assets/hookedu/07.jpg" alt="" loading="lazy" /></button>
+          <button class="gal__thumb" data-i="7" aria-label="Quiz overview"><img src="assets/hookedu/08.jpg" alt="" loading="lazy" /></button>
+        </div>
+      </div>
+      <ul class="tags" style="border-top:0;padding-top:18px"><li>Vue</li><li>JavaScript</li><li>HTML/CSS</li><li>Laravel</li><li>MySQL</li></ul>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year">2026</span> Inalyn Kim P. Tamayo</p>
@@ -457,6 +697,6 @@ Running 7 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
