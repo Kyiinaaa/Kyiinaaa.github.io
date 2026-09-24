@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -161,6 +161,21 @@ Running 7 tests using 1 worker
           <li class="job">
             <div class="job__body">
               <div class="job__head">
+                <h3>Frontend Developer <span class="at">@ Freelance / Commissions</span></h3>
+                <span class="badge">Aug 2025 – Nov 2025</span>
+              </div>
+              <p class="job__sub">Guidance Office Management System for a college · with a teammate</p>
+              <ul class="checks">
+                <li>Built role-based portals for students, guidance facilitators, psychometricians, and the guidance head in Vue 3 + TypeScript.</li>
+                <li>Built the multi-part Student Cumulative Records Inventory (SCRI) form, its review view, and PDF downloads.</li>
+                <li>Built the counseling booking flow and calendar, and fixed a double-booking bug.</li>
+                <li>Tested and polished the UI: responsive layouts, text visibility, and status indicators.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job__body">
+              <div class="job__head">
                 <h3>Student Intern <span class="at">@ DSWD Field Office XI</span></h3>
                 <span class="badge">Jun 2024 – Jan 2025</span>
               </div>
@@ -271,6 +286,27 @@ Running 7 tests using 1 worker
             </ul>
             <ul class="tags"><li>Vue</li><li>JavaScript</li><li>HTML/CSS</li><li>Laravel</li><li>MySQL</li></ul>
             <span class="case__more">View screenshots <span aria-hidden="true">→</span></span>
+          </article>
+                  <article class="case case--open case--wide" data-open="dlg-commission" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open details: TC-05">
+            <div class="case__top">
+              <span class="case__id">TC-05</span>
+              <span class="status status--pass">Frontend Commission</span>
+            </div>
+            <div class="case__wide">
+              <div>
+                <h3>Guidance Office Management System</h3>
+                <p class="case__role">Frontend Developer · Commission with a teammate · Aug – Nov 2025</p>
+                <p>A web system for a college guidance and counseling office. Students fill out their cumulative records and book sessions, and staff manage students, bookings, and assessments, each in their own portal.</p>
+              </div>
+              <ul class="checks checks--sm">
+                <li>4 role-based portals + super admin</li>
+                <li>Multi-part SCRI intake form with PDF export</li>
+                <li>Counseling booking calendar</li>
+                <li>Auth, navigation &amp; per-role settings</li>
+              </ul>
+            </div>
+            <ul class="tags"><li>Vue 3</li><li>TypeScript</li><li>Inertia.js</li><li>Laravel</li><li>Tailwind CSS</li><li>Chart.js</li></ul>
+            <span class="case__more">View details <span aria-hidden="true">→</span></span>
           </article>
         </div>
 
@@ -694,6 +730,56 @@ Running 7 tests using 1 worker
     </div>
   </dialog>
 
+  <dialog class="sheet" id="dlg-commission" aria-labelledby="dlg-commission-title">
+    <div class="sheet__inner">
+      <header class="sheet__head">
+        <div>
+          <p class="kicker">TC-05 · Frontend Commission</p>
+          <h2 id="dlg-commission-title">Guidance Office Management System</h2>
+        </div>
+        <button class="sheet__close" data-close aria-label="Close">✕</button>
+      </header>
+      <p class="lead">A commissioned web system for a college's guidance and counseling office, built with a teammate over four months. I built most of the UI: the portals, forms, booking flow, and PDF records.</p>
+
+      <ul class="kpis">
+        <li><b data-count="54">54</b><span>commits from me</span></li>
+        <li><b>5</b><span>role-based portals</span></li>
+        <li><b>4</b><span>months, Aug–Nov 2025</span></li>
+        <li><b>3</b><span>PDF record exports</span></li>
+      </ul>
+
+      <h3 class="sheet__h3">Who uses it</h3>
+      <div class="roles">
+        <div class="role"><span class="role__ico" aria-hidden="true">🎓</span><b>Students</b><p>Dashboard, the SCRI intake forms, and counseling session booking.</p></div>
+        <div class="role"><span class="role__ico" aria-hidden="true">🤝</span><b>Guidance Facilitators</b><p>Dashboard, student list, and a booking calendar.</p></div>
+        <div class="role"><span class="role__ico" aria-hidden="true">🧠</span><b>Psychometricians</b><p>Dashboard, assessments, and account settings.</p></div>
+        <div class="role"><span class="role__ico" aria-hidden="true">🏛️</span><b>Guidance Head</b><p>Oversight of faculty, students, and assessments.</p></div>
+        <div class="role"><span class="role__ico" aria-hidden="true">🛡️</span><b>Super Admin</b><p>System-level management.</p></div>
+      </div>
+
+      <h3 class="sheet__h3">What I built</h3>
+      <ul class="areas">
+        <li><b>SCRI intake form</b><span>The multi-part Student Cumulative Records Inventory: form layout, input handling, and a read-only review view.</span></li>
+        <li><b>PDF records</b><span>Downloadable PDFs for SCRI part 1, part 2, and the complete record.</span></li>
+        <li><b>Booking</b><span>Session booking for students and a calendar for facilitators. Fixed a double-booking bug.</span></li>
+        <li><b>Portals &amp; dashboards</b><span>Role-specific dashboards and pages, with charts built in Chart.js.</span></li>
+        <li><b>App shell</b><span>Login, registration, privacy policy, sidebar, navigation, user menu, and per-role settings.</span></li>
+        <li><b>Polish &amp; QA</b><span>Responsive fixes, text visibility, severity and status indicators, and table alignment.</span></li>
+      </ul>
+
+      <h3 class="sheet__h3">Timeline</h3>
+      <ol class="tline">
+        <li><time>Aug 2025</time><p>Auth screens, dashboards, sidebar, the student page layout, and the psychometrician and facilitator portals</p></li>
+        <li><time>Sep 2025</time><p>Super admin, chart fixes, search, notes, and status UI</p></li>
+        <li><time>Oct 2025</time><p>Double-booking fix, severity and status indicators, settings inputs, chat text</p></li>
+        <li><time>Nov 2025</time><p>The SCRI view, PDF export for part 1, part 2, and the complete record, facilitator calendar, final polish</p></li>
+      </ol>
+
+      <ul class="tags" style="border-top:0;padding-top:22px"><li>Vue 3</li><li>TypeScript</li><li>Inertia.js</li><li>Laravel</li><li>Tailwind CSS</li><li>Chart.js</li><li>Supabase</li></ul>
+      <p class="muted small">The source code is private, and screenshots are left out to protect student records.</p>
+    </div>
+  </dialog>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span id="year">2026</span> Inalyn Kim P. Tamayo</p>
@@ -701,6 +787,6 @@ Running 7 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
