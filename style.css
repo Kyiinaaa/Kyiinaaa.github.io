@@ -1,16 +1,16 @@
 :root {
-  --bg: #fdf9fb;
-  --bg-alt: #f8eff4;
+  --bg: #fff4f8;
+  --bg-alt: #fde4ef;
   --surface: #ffffff;
-  --text: #22161d;
-  --text-2: #5a4852;
-  --muted: #8c7a84;
-  --line: #efe1e8;
-  --line-strong: #e4cfda;
-  --accent: #db2777;
+  --text: #2a1522;
+  --text-2: #5e4252;
+  --muted: #957585;
+  --line: #f7d4e3;
+  --line-strong: #f0bcd3;
+  --accent: #e0307f;
   --accent-ink: #be185d;
-  --accent-soft: #fde7f1;
-  --accent-glow: rgba(236, 72, 153, .16);
+  --accent-soft: #fcd9e9;
+  --accent-glow: rgba(236, 72, 153, .28);
   --term-bg: #1d1219;
   --term-bar: #281a23;
   --term-line: #3a2632;
@@ -24,18 +24,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #130d11;
-    --bg-alt: #1a1217;
-    --surface: #1f161b;
-    --text: #f5e9ef;
-    --text-2: #c7b1bc;
-    --muted: #8f7a85;
-    --line: #2f2229;
-    --line-strong: #3e2d36;
+    --bg: #1c0f17;
+    --bg-alt: #26121e;
+    --surface: #2b1623;
+    --text: #fcebf3;
+    --text-2: #dcb9ca;
+    --muted: #a8849a;
+    --line: #432335;
+    --line-strong: #5a2e46;
     --accent: #f472b6;
     --accent-ink: #f9a8d4;
-    --accent-soft: #3a1a2b;
-    --accent-glow: rgba(244, 114, 182, .12);
+    --accent-soft: #4a1c35;
+    --accent-glow: rgba(244, 114, 182, .22);
     --term-bg: #0d080b;
     --term-bar: #171014;
     --term-line: #2a1d24;
@@ -43,18 +43,18 @@
   }
 }
 :root[data-theme="dark"] {
-  --bg: #130d11;
-  --bg-alt: #1a1217;
-  --surface: #1f161b;
-  --text: #f5e9ef;
-  --text-2: #c7b1bc;
-  --muted: #8f7a85;
-  --line: #2f2229;
-  --line-strong: #3e2d36;
+  --bg: #1c0f17;
+  --bg-alt: #26121e;
+  --surface: #2b1623;
+  --text: #fcebf3;
+  --text-2: #dcb9ca;
+  --muted: #a8849a;
+  --line: #432335;
+  --line-strong: #5a2e46;
   --accent: #f472b6;
   --accent-ink: #f9a8d4;
-  --accent-soft: #3a1a2b;
-  --accent-glow: rgba(244, 114, 182, .12);
+  --accent-soft: #4a1c35;
+  --accent-glow: rgba(244, 114, 182, .22);
   --term-bg: #0d080b;
   --term-bar: #171014;
   --term-line: #2a1d24;
@@ -210,7 +210,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Stats strip */
-.stats { border-block: 1px solid var(--line); background: var(--surface); }
+.stats { border-block: 1px solid var(--line); background: linear-gradient(90deg, var(--accent-soft), var(--surface) 50%, var(--accent-soft)); }
 .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .stats__grid li { padding: 26px 24px; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--line); }
 .stats__grid li:first-child { border-left: 0; padding-left: 0; }
