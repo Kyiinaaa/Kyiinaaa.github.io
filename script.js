@@ -190,6 +190,47 @@
     counters.forEach((el) => { if (!reduceMotion) el.textContent = "0"; countObserver.observe(el); });
   }
 
+  // Recommendations carousel: arrows + dots over a native scroll-snap track
+  const recs = document.querySelector(".recs");
+  if (recs) {
+    const cards = [...recs.children];
+    const ctrl = document.querySelector(".recs__ctrl");
+    const dotsBox = ctrl.querySelector(".recs__dots");
+    const [prev, next] = ctrl.querySelectorAll(".recs__nav");
+    let stops = 1;
+    const step = () => (cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : recs.clientWidth);
+    const current = () => Math.min(stops - 1, Math.round(recs.scrollLeft / step()));
+    const go = (i) => recs.scrollTo({ left: Math.max(0, Math.min(stops - 1, i)) * step(), behavior: reduceMotion ? "auto" : "smooth" });
+    const sync = () => {
+      const i = current();
+      [...dotsBox.children].forEach((d, k) => d.setAttribute("aria-current", String(k === i)));
+      prev.disabled = i <= 0;
+      next.disabled = i >= stops - 1;
+    };
+    const build = () => {
+      const perView = Math.max(1, Math.round((recs.clientWidth + 18) / step()));
+      stops = Math.max(1, cards.length - perView + 1);
+      ctrl.hidden = stops <= 1;
+      dotsBox.replaceChildren(...Array.from({ length: stops }, (_, k) => {
+        const d = document.createElement("button");
+        d.type = "button";
+        d.setAttribute("aria-label", `Show recommendation ${k + 1}`);
+        d.addEventListener("click", () => go(k));
+        return d;
+      }));
+      sync();
+    };
+    prev.addEventListener("click", () => go(current() - 1));
+    next.addEventListener("click", () => go(current() + 1));
+    recs.addEventListener("scroll", sync, { passive: true });
+    recs.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
+    });
+    window.addEventListener("resize", build);
+    build();
+  }
+
   // Copy email
   document.querySelectorAll(".copy").forEach((btn) => {
     btn.addEventListener("click", async () => {

@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=22" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -432,7 +432,7 @@ Running 7 tests using 1 worker
           <h2>In their <em>words</em>.</h2>
           <p class="section__note">What people I've worked with have to say.</p>
         </header>
-        <div class="recs">
+        <div class="recs" role="region" aria-label="Recommendations" tabindex="0">
           <figure class="rec">
             <span class="rec__mark" aria-hidden="true">“</span>
             <blockquote class="rec__quote">
@@ -472,6 +472,11 @@ Running 7 tests using 1 worker
               </span>
             </figcaption>
           </figure>
+        </div>
+        <div class="recs__ctrl" hidden>
+          <button class="recs__nav" data-dir="-1" aria-label="Previous recommendation">‹</button>
+          <div class="recs__dots"></div>
+          <button class="recs__nav" data-dir="1" aria-label="Next recommendation">›</button>
         </div>
       </div>
     </section>
@@ -889,6 +894,6 @@ Running 7 tests using 1 worker
     </div>
   </footer>
 
-  <script src="script.js?v=22"></script>
+  <script src="script.js?v=23"></script>
 </body>
 </html>
